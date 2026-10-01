@@ -247,3 +247,19 @@ footer {
         left: 15px;
     }
 }
+
+.profile.active {
+    transform: translateX(-50%) translateY(-8px);
+    transition: 0.2s;
+}
+
+.profile {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
