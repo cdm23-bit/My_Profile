@@ -186,7 +186,7 @@ button {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: none;
   scrollbar-width: none;
 }
 
@@ -198,8 +198,6 @@ button {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 .section-content {
@@ -969,31 +967,70 @@ button {
     letter-spacing: 0.08em;
   }
 
+  /* ============================================================
+     START: MOBILE SECTION FLOW
+     ============================================================ */
+
+  .page-section {
+    min-height: auto;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .section-content {
+    min-height: auto;
+    padding: 80px 6vw 60px;
+  }
+
+  .home-section {
+    min-height: 100vh;
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* ============================================================
+     END: MOBILE SECTION FLOW
+     ============================================================ */
+
+
+  /* ============================================================
+     START: MOBILE PERSONAL INFO
+     ============================================================ */
+
+  .personal-info-section {
+    display: block;
+  }
+
   .personal-layout {
+    min-height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto;
     padding-top: 60px;
+    padding-bottom: 40px;
   }
 
   .identity-area {
     grid-column: 1;
-    grid-row: 1;
-    min-height: 48vh;
+    grid-row: auto;
+    min-height: auto;
+    padding: 45px 15px 55px;
   }
 
   .about-me-box {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: auto;
   }
 
   .interests-box {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: auto;
   }
 
   .quote-area {
     grid-column: 1;
-    grid-row: 4;
+    grid-row: auto;
   }
 
   .identity-side-line,
@@ -1016,6 +1053,39 @@ button {
     font-size: 25px;
   }
 
+  .about-me-box,
+  .interests-box,
+  .quote-area {
+    padding: 22px 20px;
+  }
+
+  .about-me-box > p {
+    margin-top: 20px;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 15px;
+  }
+
+  .quote-content {
+    height: auto;
+    min-height: 120px;
+  }
+
+  /* ============================================================
+     END: MOBILE PERSONAL INFO
+     ============================================================ */
+
+
+  /* ============================================================
+     START: MOBILE SKILLS
+     ============================================================ */
+
+  .skills-content {
+    min-height: auto;
+  }
+
   .skill-bar-row {
     grid-template-columns: 80px 1fr 45px;
     gap: 10px;
@@ -1023,16 +1093,62 @@ button {
   }
 
   .skills-panel {
+    width: 100%;
     padding: 25px 20px;
   }
 
+  /* ============================================================
+     END: MOBILE SKILLS
+     ============================================================ */
+
+
+  /* ============================================================
+     START: MOBILE PROJECTS
+     ============================================================ */
+
+  .projects-content {
+    min-height: auto;
+  }
+
+  .project-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
   .project-box {
+    min-height: 300px;
     grid-template-columns: 40px 1fr;
   }
 
   .project-body {
     padding-right: 18px;
   }
+
+  /* ============================================================
+     END: MOBILE PROJECTS
+     ============================================================ */
+
+
+  /* ============================================================
+     START: MOBILE CONTACT
+     ============================================================ */
+
+  .contact-content {
+    min-height: auto;
+  }
+
+  .contact-box {
+    width: 100%;
+  }
+
+  /* ============================================================
+     END: MOBILE CONTACT
+     ============================================================ */
+
+
+  /* ============================================================
+     START: MOBILE HOME
+     ============================================================ */
 
   .home-decoration {
     display: none;
@@ -1042,12 +1158,25 @@ button {
     font-size: 10vw;
   }
 
+  /* ============================================================
+     END: MOBILE HOME
+     ============================================================ */
+
+
+  /* ============================================================
+     START: MOBILE FOOTER
+     ============================================================ */
+
   .site-footer {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
     padding: 10px;
   }
+
+  /* ============================================================
+     END: MOBILE FOOTER
+     ============================================================ */
 }
 
 /* ============================================================
